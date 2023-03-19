@@ -45,28 +45,30 @@ if __name__ == '__main__':
         
   changes = []   # saraksts, kas satur veikto maiņu indeksus
 
-  apstradePabeigta = False
-  while not(apstradePabeigta):
-    IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (I/F): ")
-    if IevadesVeids == "I":
+  #apstradePabeigta = False
+  #while not(apstradePabeigta):
+  IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (I/F): ")
+  if "I" in IevadesVeids:
         n = int(input("Ievadiet masīva elementu skaitu: "))  # n ir vesels skaitlis
         virkne = input("Ievadiet virkni ar masīva elementiem atdalot tos ar tukšumu: ")
         arr = virkne.split(" ")  # sadala ievadīto stringu "virkne" masīvā "arr"
         heapSort(arr, n, changes)
         printAnswer(changes)
-        apstradePabeigta = True
-    elif IevadesVeids == "F":
+        #apstradePabeigta = True
+  elif "F" in IevadesVeids: 
         failaNos = input("Ievadiet faila nosaukumu: ")
-        with open(failaNos, 'r') as f:
-        #with open('dati.txt', 'r') as f:
+        failaNos = "tests/" + failaNos
+        if "a" not in failaNos:
+         with open(failaNos, 'r') as f:
+         #with open('dati.txt', 'r') as f:
             n = int(f.readline())
             arr = list(map(int, f.readline().split()))
             heapSort(arr, n, changes)
             printAnswer(changes)
-            apstradePabeigta = True
-    else:
+            #apstradePabeigta = True
+  else:
       print("Šādu simbolu ievadīt nav paredzēts")
-      print("Ievadiet kādu no (E/F)")
-      apstradePabeigta = False
+      print("Ievadiet kādu no (I/F)")
+      #apstradePabeigta = False
          
     
