@@ -47,15 +47,15 @@ if __name__ == '__main__':
 
   apstradePabeigta = False
   while not(apstradePabeigta):
-    IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (e/f): ")
-    if IevadesVeids == "e":
+    IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (i/f): ")
+    if IevadesVeids == "I":
         n = int(input("Ievadiet masīva elementu skaitu: "))  # n ir vesels skaitlis
         virkne = input("Ievadiet virkni ar masīva elementiem atdalot tos ar tukšumu: ")
         arr = virkne.split(" ")  # sadala ievadīto stringu "virkne" masīvā "arr"
         heapSort(arr, n, changes)
         printAnswer(changes)
         apstradePabeigta = True
-    elif IevadesVeids == "f":
+    elif IevadesVeids == "F":
         failaNos = input("Ievadiet faila nosaukumu: ")
         with open(failaNos, 'r') as f:
         #with open('dati.txt', 'r') as f:
@@ -66,7 +66,7 @@ if __name__ == '__main__':
             apstradePabeigta = True
     else:
       print("Šādu simbolu ievadīt nav paredzēts")
-      print("Ievadiet kādu no (e/f)")
+      print("Ievadiet kādu no (E/F)")
       apstradePabeigta = False
          
     
