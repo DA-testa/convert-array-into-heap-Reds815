@@ -26,20 +26,20 @@ def heapSort(arr, n, changes):
 
 
 def printAnswer(changes):
-    print()
-    print("Output:")
-    print()
+    #print()
+    #print("Output:")
+    #print()
     changeCount = int(len(changes)/2)
     if (changeCount == 0):
        print("The input array is already a heap, because it is sorted in increasing order.") 
     else:  
        print(int(len(changes)/2)) # izdrukā maiņu skaitu
-       print()
+       #print()
        #print(*changes)  # izdrukā sarakstu bez kvadrātiekavām un atstarpi starp elementiem                  #print(changes)  # izdrukā sarakstu ar kvadrātiekavām un elementus atdala ar komatu           
        changeString="".join(map(str,changes)) # sarakstu pārveido stringā
        for i in range(0,len(changes),2): # ciklā drukā maiņu pārīšus
          print(changeString[i:i+2])
-         print()
+         #print()
  
 if __name__ == '__main__':
         
