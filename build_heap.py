@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
   apstradePabeigta = False
   while not(apstradePabeigta):
-    IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (i/f): ")
+    IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (I/F): ")
     if IevadesVeids == "I":
         n = int(input("Ievadiet masīva elementu skaitu: "))  # n ir vesels skaitlis
         virkne = input("Ievadiet virkni ar masīva elementiem atdalot tos ar tukšumu: ")
