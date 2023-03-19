@@ -49,9 +49,8 @@ if __name__ == '__main__':
   #while not(apstradePabeigta):
   IevadesVeids = input("Izvēlieties veidu, kā ievadīt datus - no ekrāna vai faila (I/F): ")
   if "I" in IevadesVeids:
-        n = int(input("Ievadiet masīva elementu skaitu: "))  # n ir vesels skaitlis
-        virkne = input("Ievadiet virkni ar masīva elementiem atdalot tos ar tukšumu: ")
-        arr = virkne.split(" ")  # sadala ievadīto stringu "virkne" masīvā "arr"
+        n = int(input("Ievadiet masīva elementu skaitu: "))
+        arr = list(map(int, input().split()))
         heapSort(arr, n, changes)
         printAnswer(changes)
         #apstradePabeigta = True
